@@ -12,7 +12,7 @@ tol=1e-10;
 a=0.5;
 b=2.5;
 
-# define an test function (f=x^3-6x^2+11x-6)
+# define a test function (f=x^3-6x^2+11x-6)
 x=sym.Symbol('x');
 f = sym.lambdify((x), x**3+2*x-8, "numpy");
 
