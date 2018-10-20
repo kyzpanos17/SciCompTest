@@ -6,7 +6,7 @@ from numpy import pi
 from scipy.interpolate import RectBivariateSpline
 import matplotlib.pyplot as plt
 
-#universal parameters
+#universal parameters (tolerance and maximum number of iterations)
 tol=1e-7;
 Nmax=100;
 
