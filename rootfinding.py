@@ -129,4 +129,25 @@ def regulafalsi_AndersonBjork(f,a,b,tol=1e-7,N=1000,verb=1):
 
     return c;
 
+def newtonraphson(f,df,x,tol=1e-7,N=1000,verb=1):
+
+    for i in range(N):
+
+        if (df(x)!=0):
+            x=x-f(x)/df(x)
+        else:
+            print("Error: Newton Raphson cannot converge deu to df(xk)=0");
+
+        if (np.abs(f(x))<tol):
+            break;
+
+    if (i+1==N):
+        print("Error: Newton Raphson cannot converge within the prescribed tolerance (Nmax="+str(N)+").");
+    else:
+        if (verb==1):
+            print("Newton Raphson converged in "+str(i+1)+" iteration.");
+            print("The root is: ", "%.15f" % x);
+
+    return x;
+
 # end python
