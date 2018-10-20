@@ -6,7 +6,7 @@ def bisection(f,a,b,tol=1e-7,N=1000,verb=1):
     if (f(a)*f(b)<0):
         for i in range(N):
 
-            c=(a+b)/2.0;
+            c=a+(b-a)/2.0;
 
             if (np.abs(f(c))<tol):
                 break;
